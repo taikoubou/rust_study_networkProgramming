@@ -4,8 +4,8 @@ extern crate log;
 
 mod tcp_client;
 mod tcp_server;
-//mod udp_client;
-//mod udp_server;
+mod udp_client;
+mod udp_server;
 
 fn main() {
     env::set_var("RUST_LOG", "debug");
@@ -39,11 +39,11 @@ fn main() {
         "udp" => match role {
             "server" => {
                 //UDPサーバ呼び出し
-                println!("UDPサーバの呼びだし");
+                udp_server::serve(address).unwrap_or_else(|e| error!("{}", e));
             }
             "client" => {
                 //UDPクライアント呼び出し
-                println!("UDPクライアントの呼び出し");
+                udp_client::communicate(address).unwrap_or_else(|e| error!("{}", e));
             }
             _ => {
                 missing_role();
