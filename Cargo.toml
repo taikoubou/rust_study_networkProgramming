@@ -1,4 +1,5 @@
 [workspace]
 members = [
     "section1",
+    "section2",
 ]
