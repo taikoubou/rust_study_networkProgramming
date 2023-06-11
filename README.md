@@ -8,5 +8,5 @@ TCP、UDPの通信関係をRustを通しての勉強
 
 ### 進度メモ
 - 第１章 完 2023/06/07
-- 第２章 pnet_macros::register(&mut registry);　が存在しないと言われ詰む
+- 第２章 pnet_macros::register(&mut registry);　が存在しないと言われ詰む 2023/06/12
   - pnetの他資料でパケットキャプチャを実装してこの章を終えたことにする 
